@@ -1,5 +1,3 @@
-# suicideWatch
-
 # suicideWatch Dashboard
 
 - [Overview](#overview)
