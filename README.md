@@ -1,2 +1,68 @@
 # suicideWatch
-The Dash app provides visualizations and statistics on the number of suicides and suicide rates for different age groups and genders in different countries.
+
+## Overview
+
+The `suicideWatch` Dash app provides visualizations and statistics on the number of suicides and suicide rates for different age groups and genders in various countries. The app is primarily targeted towards researchers, policymakers, mental health professionals, and anyone interested in exploring and analyzing suicide rates with interactive capabilities that allow them to study the trends to find measures to mitigate the detrimental effects of such phenomena.
+
+## Usage
+
+The link to the app is [here](INSERT THE LINK)
+
+To use the `suicideWatch` app, simply open the app following the guidlines under `Running the App locally` below and select the desired countries from the dropdown menus. Then select the year range you are interested in querying your search result for by using the slider. You could also select or unselect the gender as "Male" or "Female" by selecting the appropriate tick boxe in the top selection pane. The app will display a visualization of the number of suicides and the corresponding suicide rate (per 100,000 population) for the selected age group and gender in selected countries by year. Users can use this information to gain insights into the factors that contribute to the suicide rates in the countries of interest. Additionally, the app provides information and resources for suicide prevention, as well as links to support organizations and hotlines.
+
+Usage examples:
+- Select 4 countries to compare from the selection pane on the top to filter the plots by year.
+- Select sex from the selection pane on the top below country and year selection to filter the plots by gender.
+
+**INSERT THE USAGE GIF HERE**
+
+### Running the App locally
+
+To run the app locally using docker, first change the following lines in `src/app.py`:
+
+```python
+data = pd.read_csv("/app/data/master.csv")
+country_codes = pd.read_csv("/app/data/country_codes.csv")
+```
+
+to this:
+
+```python
+data = pd.read_csv("data/master.csv")
+```
+
+Then, run the following command:
+
+```bash
+docker-compose up
+```
+
+## Description
+
+The dashboard consists of one web page that shows statistics and 2 main reactive plots:
+
+- The distribution of the number of suicides
+
+The graph compares the number of suicides per 100,000 population in the selected countries on the y-axis and the year on the x-axis. The plot provides an intuition on how many suicide cases were there in each country and what was the general trend in the years of interest. It is also possible to compare the individual bars in the bar chart to get an idea of how other countries were doing in terms of their suicide rates. The displayed bar chart is interactive enabling users to get more granular information through tooltips by hovering over the visuals/data points. The user can also select and unselect the country by clicking on the title of the country they are interested in un-selecting in the legend below the plot which provides extra flexibility.
+
+- The distribution of age groups for suicides
+
+The pie chart compares the distirbution of age groups for suicides in each country selected in the dropdown menu by age group. The plot could potentially be useful in identifying high-risk age groups and evaluating the impact of suicide prevention interventions. The displayed pie chart is interactive enabling users to get more granular information through tooltips by hovering over the visuals/data points. The user can also select and unselect the age group by clicking on the on the age group they are interested in un-selecting in the legend below the chart which provides extra flexibility.
+
+Additionally, the filters in the selection pane on the top allows users to filter the dataset by sex.
+
+## App sketch
+
+**INSERT THE APP SKETCH**
+
+## Contributing
+
+Interested in contributing? Check out the contributing guidelines. We welcome and recognize all contributions. Please find the guide for contribution in [Contributing Document](https://github.com/stepanz25/suicideWatch/blob/main/CONTRIBUTING.md). Please note that this project is released with a Code of Conduct. By contributing to this project, you agree to abide by its terms outlined [here](https://github.com/stepanz25/suicideWatch/blob/main/CODE_OF_CONDUCT.md).
+
+|  Author  |  Github Username |
+|--------------|------------------|
+|  Stepan Zaiatc |  @stepanz25 |
+
+## License
+
+The materials of this project are licensed under the [MIT license](https://github.com/stepanz25/suicideWatch/blob/main/LICENSE). If re-using/re-mixing please provide attribution and link to this webpage.
