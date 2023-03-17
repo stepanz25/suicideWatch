@@ -34,9 +34,9 @@ Usage examples:
 
 https://user-images.githubusercontent.com/112679383/225847599-3cca8622-31cb-4a63-b41d-00d01593e4ba.mov
 
-### Running the App
+## Running the App
 
-## Installation
+### Installation
 If you would like to help contribute to the app, you can set up the system as follows:
 1. Download the necessary packages listed in `requirements.txt` using `pip` or `conda`
 2. Clone this repo using `https://github.com/stepanz25/suicideWatch.git`
