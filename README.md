@@ -21,7 +21,7 @@ This Dash application is a little cuisine of our bigger [Shiny](https://github.c
 
 ## Usage
 
-The link to the app is [here](INSERT THE LINK)
+The link to the app is [here](https://suicide-watch-jdpw.onrender.com)
 
 To use the `suicideWatch` app, simply open the app following the guidelines under `Running the App locally` below and select the desired countries from the drop down menus. Then select the year range you are interested in querying your search results for by using the slider. You could also select or un-select the gender as "Male" or "Female" by selecting the appropriate tick box in the top selection pane. The app will display a visualization of the number of suicides and the corresponding suicide rate (per 100,000 population) for the selected age group and gender in selected countries by year. Users can use this information to gain insights into the factors that contribute to the suicide rates in the countries of interest. Additionally, the app provides information and resources for suicide prevention, as well as links to support organizations and hotlines.
 
@@ -32,28 +32,22 @@ Usage examples:
 - Select 4 countries to compare from the selection pane on the top to filter the plots by year.
 - Select sex from the selection pane on the top below country and year selection to filter the plots by gender.
 
-**INSERT THE USAGE GIF HERE**
+![](/img/usage_example.mov)
 
-### Running the App locally
+### Running the App
 
-To run the app locally using docker, first change the following lines in `src/app.py`:
+## Installation
+If you would like to help contribute to the app, you can set up the system as follows:
+1. Download the necessary packages listed in `requirements.txt` using `pip` or `conda`
+2. Clone this repo using `https://github.com/stepanz25/suicideWatch.git`
 
-```python
-data = pd.read_csv("/app/data/master.csv")
-country_codes = pd.read_csv("/app/data/country_codes.csv")
+### To run the app locally:
+1. Navigate to the root of this repo
+2. In the command line, enter
 ```
-
-to this:
-
-```python
-data = pd.read_csv("data/master.csv")
+python src/app.py
 ```
-
-Then, run the following command:
-
-```bash
-docker-compose up
-```
+3. Copy the address printed out after "Dash is running on" to a browser to view the Dash app.
 
 ## Description
 
@@ -65,13 +59,13 @@ The graph compares the number of suicides per 100,000 population in the selected
 
 - The distribution of age groups for suicides
 
-The pie chart compares the distirbution of age groups for suicides in each country selected in the dropdown menu by age group. The plot could potentially be useful in identifying high-risk age groups and evaluating the impact of suicide prevention interventions. The displayed pie chart is interactive enabling users to get more granular information through tooltips by hovering over the visuals/data points. The user can also select and unselect the age group by clicking on the on the age group they are interested in un-selecting in the legend below the chart which provides extra flexibility.
+The pie chart compares the distribution of age groups for suicides in each country selected in the dropdown menu by age group. The plot could potentially be useful in identifying high-risk age groups and evaluating the impact of suicide prevention interventions. The displayed pie chart is interactive enabling users to get more granular information through tooltips by hovering over the visuals/data points. The user can also select and unselect the age group by clicking on the on the age group they are interested in un-selecting in the legend below the chart which provides extra flexibility.
 
 Additionally, the filters in the selection pane on the top allows users to filter the dataset by sex.
 
 ## App Sketch
 
-**INSERT THE APP SKETCH**
+![suicideWatch App Sketch](img/app_sketch.png)
 
 ## Reference
 
