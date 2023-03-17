@@ -32,7 +32,7 @@ Usage examples:
 - Select 4 countries to compare from the selection pane on the top to filter the plots by year.
 - Select sex from the selection pane on the top below country and year selection to filter the plots by gender.
 
-![](/img/usage_example.mov](https://user-images.githubusercontent.com/112679383/225847118-ecd0c07b-8c74-453a-bb06-ea780672d4c7.mov)
+https://user-images.githubusercontent.com/112679383/225847599-3cca8622-31cb-4a63-b41d-00d01593e4ba.mov
 
 ### Running the App
 
